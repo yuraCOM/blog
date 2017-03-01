@@ -1,0 +1,293 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #4f4e4e;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+	font-family: 'Open Sans', sans-serif;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #339933;
+	text-decoration: underline;
+}
+a:hover {
+	color: #339933;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #339933;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+
+/* фикс позиции хедера */
+/*.one{  
+   position: fixed;
+   width:100%; z-index:100;}
+.niz{ position:relative; top:80px; }*/
+
+/*--------------------*/
+
+header {
+	overflow:hidden; background:linear-gradient(to left top, yellow, green, red, blue, red);}
+header:hover{ background: linear-gradient(to left bottom, yellow, green, red, blue, red, violet, pink);}
+	
+.center-block-main{
+	margin: 0 auto; max-width:990px;}
+	
+.logo{
+	float:left;
+	margin-top:45px;}
+
+.menu-top{	float:right;}
+
+				.journal{ background-color:#701AFB;}
+				.about{ background-color:#F804EF;}
+				.work{ background-color:#B241EC}
+				.contact{ background-color:#FF0239}
+
+				.journal:hover{ background: linear-gradient( -145deg, yellow, green, red, blue, red, violet, pink);}
+				.about:hover{ background: linear-gradient( -415deg, yellow, green, red, blue, red, violet, pink);}
+				.work:hover{ background: linear-gradient( -455deg, yellow, green, red, blue, red, violet, pink);}
+				.contact:hover{ background: linear-gradient( -485deg, yellow, green, red, blue, red, violet, pink);}
+								
+					
+.menu-top li{
+	float:left;
+	font-weight:600;}
+.menu-top li a {
+	color:#fff; text-decoration:none; display:block; padding:50px 35px; border-bottom: 3px solid #292929;}
+.menu-top li a:hover {
+	color: #FFF501; border-bottom: 3px solid #58c93a; }	
+	
+.content{ border-left:1px solid #0ABAF4; border-right:1px solid #0ABAF4}
+
+main{float:left; width:62.5%; margin-top:70px;}
+		article{ margin-bottom:70px;}
+		
+		article>header{font-size:0;background:none; margin-bottom:10px; position:relative;}
+		
+		.panel{ position:absolute; bottom:-60; margin-left:140px; background: rgba(0,0,0.6); color:#fff; width:20%;
+				}
+		.panel-ben{ width:15%; left:1px;}
+		article>header:hover .panel{ bottom:0;  }
+		
+article>h2{	font-size:28px; text-transform:uppercase; font-weight:bold; line-height:1.1; margin:0 0 40px 20px; color:#34F306;}
+							
+		article>p{margin:0 0 20px 20px; line-height:1.3;}	
+
+a.more{	border:2px solid pink; color:red; padding:7px 20px; display:inline-block; border-radius:20px; text-decoration:none;
+		transition:all 0.1s linear; }
+		
+a:hover.more{color:#2100F8; border:2px dotted #2100F8;}
+
+aside{ float:right; width:28.3%;margin-top:70px;}
+	
+.widget{ margin-bottom:50px;}
+
+.widget h2{ text-transform:uppercase; color:#FF05DE; background:#f8f8f8; border-left:2px solid #58c93a; padding:10px 20px; 
+font-weight:bold; margin-bottom:20px;
+ }
+ 
+.search{ color:#000000; font-size:10px; width:100%; border:1px solid #00ABFF; border-right:none; padding:15px 20px;}
+
+.widget>nav{ margin:0 0 0 20px;}
+
+.sub{ position:relative; width:100%; height:48px;}
+
+.bender{ height:110px; position:relative; left:140px; top:-100px;}
+ 
+.podpiska{ color:black; font-size:14px; width:100%; border:1px solid #00ABFF; border-right:none; padding:15px 60px 15px 10px; box-sizing:border-box; position: absolute; top:0; left:0;}
+
+.podpiska-strelka{ position:absolute; right:20px; top:5px;}
+
+.pager{ border-top:1px solid #A2A2A2; font-size:18px; text-transform:uppercase; font-weight:bold; padding:30px;}
+.pager a{ text-decoration:none; color: #FD0000; padding: 5px;}
+.pager a:hover{ text-decoration:none; color: blue; border:2px solid green; border-radius:10px;}
+.pre{ float:left;}
+.next{ float:right;}
+
+footer{
+	background-color:#D4D0C8; border-top:3px solid #FFA8DB; text-align:center; font-size:15px; padding:50px 0;
+	margin-top:80px;}
+	footer img{ margin: 0 auto 20px 0;}
+	
+@media screen and (max-width:768px){
+	.logo{ margin-top:10px;}
+	.menu-top li a {padding:15px 35px;}
+	.niz{ position: static;}
+	.one{ position: static; width:100%;}
+	main{float:none; width:100%; margin-top:10px;}
+	article{margin-bottom:10px;}
+	article>header{margin-bottom:1px;}
+	article>h2{	margin:0 0 5px 20px; font-size:18px;}
+	article>p{margin:0 0 5px 20px; font-size:14px;}
+	article>header img{ width:100%;}
+	a.more{padding:5px 10px;}
+	aside{float:none; width:100%; margin-top:10px;}
+	.widget{ margin-bottom:10px;}
+	.widget h2{ padding:5px 10px; margin-bottom:10px;}
+	.bender{ margin-bottom:-100px;}
+	.reklama { width:30%;}
+	.pager{ font-size:12px; font-weight:100; padding:15px;}
+	footer{font-size:12px; padding:10px 0; margin-top:5px;}
+	footer img{ margin: 0 auto 0px 0;}
+	}
+@media screen and (max-width:620px){
+	.logo{ float:none; margin:0 auto; display:block; width:10%}
+	.menu-top{float:none; margin: 0 auto;; display: table;}
+	.menu-top li a {padding:5px 10px; font-weight:100;}
+	
+	}
+	
+@media screen and (max-width:540px){
+	.logo{ float:none; margin:0 auto; display:block; width:10%}
+	.menu-top{float:none; margin: 0 auto;; display: table;}
+	.menu-top li a {padding:5px 10px; font-weight:100;}
+	.niz{ position: static;}
+	.one{ position: static; width:100%;}
+	main{float:none; width:100%; margin-top:10px;}
+	article{margin-bottom:10px;}
+	article>header{margin-bottom:1px;}
+	article>h2{	margin:0 0 5px 20px; font-size:18px;}
+	article>p{margin:0 0 5px 20px; font-size:14px;}
+	article>header img{ width:100%;}
+	a.more{padding:5px 10px;}
+	aside{float:none; width:100%; margin-top:10px;}
+	.widget{ margin-bottom:10px;}
+	.widget h2{ padding:5px 10px; margin-bottom:10px;}
+	.bender{ margin-bottom:-100px;}
+	.reklama { width:30%;}
+	.pager{ font-size:12px; font-weight:100; padding:15px;}
+	footer{font-size:12px; padding:10px 0; margin-top:5px;}
+	footer img{ margin: 0 auto 0px 0;}
+	.panel{ position:absolute; bottom:-60; margin-left:0px; background: rgba(0,0,0.6); color:#fff; width:20%;
+				}
+		.panel-ben{ width:15%; left:1px;}
+		article>header:hover .panel{ bottom:0;  }
+	
+	
+	}
+	
+	
+
+
+@media screen and (max-width:480px){
+	.logo{ float:none; margin:0 auto; display:block; width:10%}
+	.menu-top{float:none; margin: 0 auto;; display: table;}
+	.menu-top li a {padding:5px 10px; font-weight:100;}
+	.niz{ position: static;}
+	.one{ position: static; width:100%;}
+	main{float:none; width:100%; margin-top:10px;}
+	article{margin-bottom:10px;}
+	article>header{margin-bottom:1px;}
+	article>h2{	margin:0 0 5px 20px; font-size:18px;}
+	article>p{margin:0 0 5px 20px; font-size:14px;}
+	article>header img{ width:100%;}
+	a.more{padding:5px 10px;}
+	aside{float:none; width:100%; margin-top:10px;}
+	.widget{ margin-bottom:10px;}
+	.widget h2{ padding:5px 10px; margin-bottom:10px;}
+	.bender{ margin-bottom:-100px;}
+	.reklama { width:30%;}
+	.pager{ font-size:12px; font-weight:100; padding:15px;}
+	footer{font-size:12px; padding:10px 0; margin-top:5px;}
+	footer img{ margin: 0 auto 0px 0;}
+	
+	}
+	.ben-all{ width:5%; position:absolute; top:-7px; }
+	
+	@media screen and (max-width:320px){
+	.logo{ float:none; margin:0 auto; display:block; width:10%}
+	.menu-top{float:none; margin: 0 auto;; display: table;}
+	.menu-top li a {padding:5px 5px; font-weight:100;}
+	.niz{ position: static;}
+	.one{ position: static; width:100%;}
+	main{float:none; width:100%; margin-top:10px;}
+	article{margin-bottom:10px;}
+	article>header{margin-bottom:1px;}
+	article>h2{	margin:0 0 5px 20px; font-size:18px;}
+	article>p{margin:0 0 5px 20px; font-size:14px;}
+	article>header img{ width:100%;}
+	a.more{padding:5px 10px;}
+	aside{float:none; width:100%; margin-top:10px;}
+	.widget{ margin-bottom:5px;}
+	.widget h2{ padding:5px 10px; margin-bottom:5px;}
+	.bender{ margin-bottom:-100px;}
+	.reklama { width:30%;}
+	.pager{ font-size:9px; font-weight:100; padding:10px;}
+	footer{font-size:9px; padding:10px 0; margin-top:5px;}
+	footer img{ margin: 0 auto 0px 0; width:20%;}
